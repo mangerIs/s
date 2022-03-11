@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>此设备已被锁定</title>
+    <style>
+        html{
+            background-color: #353535;
+        }
+    </style>
+    <script>
+window.setInterval(function (){
+    if(Number(document.getElementById("min").innerText)<=0){
+        document.getElementById("hour").innerText=Number(document.getElementById("hour").innerText)-1
+        document.getElementById("min").innerText=59
+    }else{
+            document.getElementById("min").innerText=Number(document.getElementById("min").innerText.toString())-1
+
+    }},1000)
+    /*if (document.getElementById("hour").innerText.toString().length==1){
+        document.getElementById("hour").innerText="0"+document.getElementById("hour").innerText
+    }if (document.getElementById("min").innerText.toString().length==1){
+        document.getElementById("min").innerText="0"+document.getElementById("hour").innerText
+    }8/
+},1000)**/
+    </script>
+</head>
+<body style="width: 1000%">
+<img src="img.png" height="300px" alt=""><br>
+<iframe src="caiquxingdong.html" height="500px" width=700px" style="display: inline-block"></iframe>
+
+<div style="display: inline-block">
+     <h2 style="width: 11em;color: white;display: inline-block;height: 500px">阅读说明并立即采取行动！</h2>
+    <h1 style="display: block;font-weight: normal;color: white">
+        <text id="hour">59</text>:
+        <text id="min">13</text>
+    </h1>
+</div>
+<br>
+<font color="white">钥匙：</font> <input><button onclick="window.alert('没门！')">开锁</button>
+</body>
+</html>
